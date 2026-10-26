@@ -1,27 +1,34 @@
-# Nilson Lopes — Portfolio
+# Nilson Lopes — portfolio
 
-Portfolio project for data analysis, BI, automation, and AI tooling. The site is being designed in Portuguese and English, with project evidence drawn from Nilson's public work.
+Bilingual, person-first portfolio for RPA, data analysis, BI, and automation work. The site is a static project in `site/` and deploys to GitHub Pages through Actions after changes reach `main`.
 
-## Current stage
+## Local preview
 
-This branch contains three small visual auditions for the portfolio identity. Open `auditions/index.html` to compare them:
-
-- **A — Terminal / ASCII:** engineering-forward, text-mode process map.
-- **B — Technical drafting:** traceability, measured grids, and the project screenshot as evidence.
-- **C — New Wave editorial:** oversized poster typography with an offset project image.
-
-The identity shortlist, live reference probes, and loading-cost estimates are in [`auditions/research-notes.md`](auditions/research-notes.md).
-
-The screenshot in `auditions/assets/` comes from the public [`website-analytics` repository](https://github.com/jounimn/website-analytics). That repository describes its public sample as sanitized and uses fictional organization names and data.
-
-## Preview locally
-
-The auditions are standalone HTML files. Start a local server from the repository root:
-
-```powershell
-python -m http.server 4173
+```sh
+npm install
+npm run preview
 ```
 
-Then open <http://127.0.0.1:4173/auditions/>.
+Open the local address printed by the preview server. Portuguese is the default; use `?lang=en` for English.
 
-The final portfolio and its printable PDF will follow the identity selection and approval of the one-page site specification.
+## Bilingual PDF
+
+```sh
+npm run export:pdf
+```
+
+This exports Portuguese first and English second to `site/downloads/nilson-lopes-portfolio.pdf`. Playwright uses its bundled Chromium by default. To use a local Chromium-compatible browser, set `PORTFOLIO_BROWSER` to its executable path.
+
+## GitHub Pages
+
+The workflow in `.github/workflows/deploy-pages.yml` publishes only `site/` on pushes to `main` and on manual dispatch. In repository settings, Pages must use **GitHub Actions** as its build and deployment source.
+
+## Project evidence and media
+
+- The portrait is supplied by Nilson and stored locally in `site/assets/images/nilson-lopes.jpg`.
+- Planning Intelligence image: [`website-analytics` dashboard screenshot](https://github.com/jounimn/website-analytics/blob/main/docs/screenshots/dashboard-dark.png). Its public sample is sanitized; organization names and data are fictional.
+- The Cog image is a still from the project's own `TeamInAction.gif` in [`jounimn/cog`](https://github.com/jounimn/cog).
+- The `df-design` card uses an original CSS graphic. Its project README documents browser measurements across 30 production sites.
+- No stock imagery is used. Capabilities and project descriptions avoid claims or metrics not supported by the source material.
+
+The optional decorative wireframe is built with the locally vendored Three.js r170 browser module. Its MIT license is included at `site/assets/vendor/THREE-LICENSE.txt`.
