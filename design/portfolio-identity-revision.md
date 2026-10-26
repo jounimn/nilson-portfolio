@@ -16,16 +16,16 @@ an abstract service.
 - **Languages:** Portuguese and English, with a visible language switch and
   equivalent content in both languages.
 - **Devices:** responsive desktop and mobile layouts.
-- **Identity:** A's dark terminal/ASCII direction, with ASCII used as a supporting
-  motif. A real portrait and human introduction lead the page; terminal styling
-  must not obscure the person or the projects.
-- **Assets:** use Nilson's own material only. The verified GitHub profile photo is
-  a 200px square crop and looks too soft for the large, prominent portrait this
-  direction needs. The concept preview uses it temporarily at a restrained size
-  so the person-first composition can be reviewed. Request an original portrait
-  from Nilson before final implementation. Do not use stock or generate a
-  substitute. The profile photo may appear in the finished site only if Nilson
-  explicitly chooses it and it is presented at a size that preserves its quality.
+- **Identity:** A's dark terminal/ASCII direction, recoloured to the saturated
+  royal blue and cyan in Nilson's portrait. Use a deep navy ground (`#081321`),
+  a bright blue signal (`#58a6ff`), and pale cyan (`#91dcff`); keep blue as the
+  single loud accent. ASCII remains a supporting motif. A real portrait and
+  human introduction lead the page; terminal styling must not obscure the
+  person or the projects.
+- **Assets:** use Nilson's own material only. The concept preview initially used
+  the GitHub crop; Nilson has now supplied the original 400 × 400 portrait. Use
+  that portrait in the concept and final site. Do not use stock or generate a
+  substitute.
 - **Motion:** retain the previously selected High tier for restrained data-lineage
   motion; honor `prefers-reduced-motion` and keep content readable without motion.
 - **Delivery:** finished bilingual website plus a PDF export of the selected

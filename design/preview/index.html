@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101311">
+  <meta name="theme-color" content="#081321">
   <link rel="icon" href="data:,">
   <title>Nilson Lopes — Portfólio / preview</title>
   <style>
     :root {
       color-scheme: dark;
-      --bg: #101311;
-      --panel: #151a17;
-      --line: #343b35;
-      --muted: #a1aaa1;
-      --paper: #f3f5ee;
-      --acid: #d6ff62;
-      --mint: #8ce5a4;
+      --bg: #081321;
+      --panel: #0f1d2e;
+      --line: #29415d;
+      --muted: #a7b7c8;
+      --paper: #f2f7fd;
+      --signal: #58a6ff;
+      --cyan: #91dcff;
       --mono: "Cascadia Code", "SFMono-Regular", Consolas, monospace;
       --sans: "Aptos", "Segoe UI", Arial, sans-serif;
       --serif: Georgia, "Times New Roman", serif;
@@ -27,7 +27,7 @@
       color: var(--paper);
       font-family: var(--sans);
       background:
-        radial-gradient(ellipse at 82% 18%, rgba(126, 159, 92, .11), transparent 31rem),
+        radial-gradient(ellipse at 82% 18%, rgba(32, 113, 232, .20), transparent 31rem),
         var(--bg);
     }
     a { color: inherit; }
@@ -35,14 +35,14 @@
     .mono { font-family: var(--mono); }
     .topline {
       height: 54px; border-bottom: 1px solid var(--line); display: flex;
-      align-items: center; justify-content: space-between; color: #bbc3b9;
+      align-items: center; justify-content: space-between; color: #b5c3d4;
       font: 11px var(--mono); letter-spacing: .04em;
     }
     .brand { display: flex; align-items: center; gap: 12px; }
-    .brand-mark { color: var(--acid); font-size: 17px; }
+    .brand-mark { color: var(--signal); font-size: 17px; }
     .top-right { display: flex; align-items: center; gap: 26px; }
     .top-right a { text-decoration: none; }
-    .lang { border: 1px solid var(--line); padding: 8px 10px; color: var(--acid); background: transparent; font: 11px var(--mono); cursor: pointer; }
+    .lang { border: 1px solid var(--line); padding: 8px 10px; color: var(--signal); background: transparent; font: 11px var(--mono); cursor: pointer; }
     .hero {
       min-height: 610px; display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(300px, .7fr);
       align-items: center; gap: 9%; padding: 67px 7% 72px; position: relative; overflow: hidden;
@@ -50,43 +50,43 @@
     }
     .hero::before {
       content: "01001110  01001001  01001100  01010011  01001111  01001110";
-      position: absolute; right: -3px; bottom: 35px; color: rgba(214,255,98,.10);
+      position: absolute; right: -3px; bottom: 35px; color: rgba(88,166,255,.12);
       font: 10px var(--mono); letter-spacing: .38em; writing-mode: vertical-rl;
     }
     .hero-copy { position: relative; z-index: 1; }
-    .eyebrow { margin: 0 0 22px; color: var(--mint); font: 11px var(--mono); letter-spacing: .14em; text-transform: uppercase; }
+    .eyebrow { margin: 0 0 22px; color: var(--cyan); font: 11px var(--mono); letter-spacing: .14em; text-transform: uppercase; }
     h1 { margin: 0; font: 500 clamp(64px, 9vw, 126px)/.88 var(--serif); letter-spacing: -.075em; }
-    .role-line { margin: 30px 0 18px; max-width: 720px; color: var(--acid); font-size: clamp(23px, 3vw, 38px); line-height: 1.12; letter-spacing: -.045em; }
-    .intro { max-width: 640px; margin: 0; color: #c5ccc2; font-size: 17px; line-height: 1.75; }
-    .focus { margin-top: 24px; color: #9da89e; font: 11px/1.9 var(--mono); letter-spacing: .03em; }
+    .role-line { margin: 30px 0 18px; max-width: 720px; color: var(--signal); font-size: clamp(23px, 3vw, 38px); line-height: 1.12; letter-spacing: -.045em; }
+    .intro { max-width: 640px; margin: 0; color: #c8d4e2; font-size: 17px; line-height: 1.75; }
+    .focus { margin-top: 24px; color: #9aadc3; font: 11px/1.9 var(--mono); letter-spacing: .03em; }
     .focus b { color: var(--paper); font-weight: 400; }
     .actions { margin-top: 31px; display: flex; gap: 12px; flex-wrap: wrap; }
     .button { display: inline-flex; justify-content: center; align-items: center; min-height: 47px; padding: 0 17px; text-decoration: none; font: 12px var(--mono); border: 1px solid var(--line); transition: border-color .2s, background .2s, color .2s; }
-    .button.primary { background: var(--acid); color: #12170d; border-color: var(--acid); }
-    .button:hover { border-color: var(--acid); }
-    .button.primary:hover { background: #e5ff9e; }
+    .button.primary { background: var(--signal); color: #071321; border-color: var(--signal); }
+    .button:hover { border-color: var(--signal); }
+    .button.primary:hover { background: #8dc7ff; }
     .portrait-wrap { justify-self: end; width: min(100%, 250px); position: relative; }
-    .portrait-meta { display: flex; justify-content: space-between; margin-bottom: 11px; color: #a4aea5; font: 10px var(--mono); letter-spacing: .08em; }
-    .portrait-frame { position: relative; border: 1px solid #526148; padding: 10px; background: rgba(21,26,23,.7); }
-    .portrait-frame::before, .portrait-frame::after { content: ""; position: absolute; width: 19px; height: 19px; border-color: var(--acid); border-style: solid; }
+    .portrait-meta { display: flex; justify-content: space-between; margin-bottom: 11px; color: #a9b9cd; font: 10px var(--mono); letter-spacing: .08em; }
+    .portrait-frame { position: relative; border: 1px solid #345c8a; padding: 10px; background: rgba(13,26,43,.84); }
+    .portrait-frame::before, .portrait-frame::after { content: ""; position: absolute; width: 19px; height: 19px; border-color: var(--signal); border-style: solid; }
     .portrait-frame::before { top: -4px; left: -4px; border-width: 1px 0 0 1px; }
     .portrait-frame::after { right: -4px; bottom: -4px; border-width: 0 1px 1px 0; }
     .portrait { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; object-position: center 38%; filter: saturate(.76) contrast(1.04); }
-    .portrait-caption { display: flex; justify-content: space-between; gap: 10px; margin-top: 11px; color: #b1bbb1; font: 10px var(--mono); }
-    .portrait-caption span:last-child { color: var(--acid); }
+    .portrait-caption { display: flex; justify-content: space-between; gap: 10px; margin-top: 11px; color: #b4c5d8; font: 10px var(--mono); }
+    .portrait-caption span:last-child { color: var(--signal); }
     .section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; padding: 39px 0 22px; }
     .section-head h2 { margin: 0; font: 500 34px var(--serif); letter-spacing: -.04em; }
-    .section-head p { margin: 0; color: #96a096; font: 10px var(--mono); }
+    .section-head p { margin: 0; color: #98adc4; font: 10px var(--mono); }
     .projects { display: grid; grid-template-columns: 1.08fr 1fr 1fr; border: 1px solid var(--line); }
-    .project { padding: 23px 24px 26px; min-height: 190px; position: relative; background: rgba(21,26,23,.4); }
+    .project { padding: 23px 24px 26px; min-height: 190px; position: relative; background: rgba(13,26,43,.45); }
     .project + .project { border-left: 1px solid var(--line); }
-    .project-index { color: var(--mint); font: 10px var(--mono); }
+    .project-index { color: var(--cyan); font: 10px var(--mono); }
     .project h3 { margin: 20px 0 9px; color: var(--paper); font-size: 20px; font-weight: 500; letter-spacing: -.03em; }
     .project h3 a { text-decoration: none; }
-    .project h3 a:hover { color: var(--acid); }
-    .project p { margin: 0; color: #a6afa6; font-size: 13px; line-height: 1.65; }
-    .project .stack { display: block; margin-top: 18px; color: #d6ff62; font: 9px var(--mono); }
-    .foot { display: flex; justify-content: space-between; padding: 24px 0 31px; color: #879187; font: 10px var(--mono); }
+    .project h3 a:hover { color: var(--signal); }
+    .project p { margin: 0; color: #adbdcf; font-size: 13px; line-height: 1.65; }
+    .project .stack { display: block; margin-top: 18px; color: var(--signal); font: 9px var(--mono); }
+    .foot { display: flex; justify-content: space-between; padding: 24px 0 31px; color: #8da0b6; font: 10px var(--mono); }
     @media (max-width: 760px) {
       .page { width: min(100% - 36px, 600px); }
       .topline { height: 51px; }
@@ -115,7 +115,7 @@
 </head>
 <body>
   <header class="topline page">
-    <div class="brand"><span class="brand-mark">◈</span><span>NILSON LOPES <span style="color:#69746b">/ PORTFOLIO</span></span></div>
+    <div class="brand"><span class="brand-mark">◈</span><span>NILSON LOPES <span style="color:#71849b">/ PORTFOLIO</span></span></div>
     <nav class="top-right" aria-label="Main navigation">
       <a class="nav-link" href="#projetos" data-i18n="navWork">Projetos</a>
       <a class="nav-link" href="https://www.linkedin.com/in/nilsondgwm/" target="_blank" rel="noreferrer" data-i18n="navContact">Contato ↗</a>
@@ -127,7 +127,7 @@
     <section class="hero" aria-labelledby="hero-name">
       <div class="hero-copy">
         <p class="eyebrow" data-i18n="eyebrow">PORTFÓLIO PESSOAL · DADOS / AUTOMAÇÃO</p>
-        <h1 id="hero-name">Nilson<br>Lopes<span style="color:var(--acid)">.</span></h1>
+        <h1 id="hero-name">Nilson<br>Lopes<span style="color:var(--signal)">.</span></h1>
         <p class="role-line" data-i18n="role">Eu conecto operação, dados e automação.</p>
         <p class="intro" data-i18n="intro">Sou Nilson. Minha trajetória passou pelo design, por redes e por operações antes de chegar a dados e BI. Essa experiência me ajuda a entender o problema de quem usa a informação e a construir análises, pipelines e automações que tornam o trabalho mais confiável.</p>
         <p class="focus"><b>RPA</b> &nbsp;·&nbsp; <b data-i18n="dataAnalysis">ANÁLISE DE DADOS</b> &nbsp;·&nbsp; <b data-i18n="automation">AUTOMAÇÃO</b> &nbsp;·&nbsp; BI</p>
@@ -138,7 +138,7 @@
       </div>
       <figure class="portrait-wrap">
         <div class="portrait-meta"><span>01 / IDENTIDADE</span><span>RJ · BR</span></div>
-        <div class="portrait-frame"><img class="portrait" src="github-avatar.jpg" alt="Foto de perfil de Nilson Lopes"></div>
+        <div class="portrait-frame"><img class="portrait" src="nilson-lopes.jpg" alt="Foto de perfil de Nilson Lopes"></div>
         <figcaption class="portrait-caption"><span>NILSON LOPES</span><span>DATA · BI · AUTOMATION</span></figcaption>
       </figure>
     </section>

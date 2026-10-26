@@ -29,7 +29,5 @@ Open `index.html` in a browser, or serve the repository root and visit
 
 ## Portrait
 
-`github-avatar.jpg` is the 200 × 200 image currently used on Nilson's public
-GitHub profile. It is included only to make the layout reviewable. Nilson should
-provide a higher-resolution portrait or explicitly approve this image before
-the final implementation uses it.
+`nilson-lopes.jpg` is Nilson's uploaded 400 × 400 portrait. It replaces the
+lower-resolution GitHub crop and is used in the preview with his approval.
