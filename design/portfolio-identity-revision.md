@@ -20,8 +20,9 @@ an abstract service.
   royal blue and cyan in Nilson's portrait. Use a deep navy ground (`#081321`),
   a bright blue signal (`#58a6ff`), and pale cyan (`#91dcff`); keep blue as the
   single loud accent. ASCII remains a supporting motif. A real portrait and
-  human introduction lead the page; terminal styling must not obscure the
-  person or the projects.
+  human introduction lead the page. Give the portrait about 310px of presence
+  on desktop and 240px on mobile so it holds its own beside the display type;
+  terminal styling must not obscure the person or the projects.
 - **Assets:** use Nilson's own material only. The concept preview initially used
   the GitHub crop; Nilson has now supplied the original 400 × 400 portrait. Use
   that portrait in the concept and final site. Do not use stock or generate a
