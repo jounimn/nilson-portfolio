@@ -17,7 +17,7 @@ Open the local address printed by the preview server. Portuguese is the default;
 npm run export:pdf
 ```
 
-This exports Portuguese first and English second to `site/downloads/nilson-lopes-portfolio.pdf`. Playwright uses its bundled Chromium by default. To use a local Chromium-compatible browser, set `PORTFOLIO_BROWSER` to its executable path.
+The PDF uses a dedicated three-page A4 editorial layout per language, based on the site's typography and palette. It is composed separately from the webpage so its project, profile, and contact sections can be laid out for print. The export puts Portuguese first, then English, at `site/downloads/nilson-lopes-portfolio.pdf`. Playwright uses its bundled Chromium by default. To use a local Chromium-compatible browser, set `PORTFOLIO_BROWSER` to its executable path.
 
 ## GitHub Pages
 

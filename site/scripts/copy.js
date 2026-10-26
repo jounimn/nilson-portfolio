@@ -1,5 +1,10 @@
 export const copy = {
   pt: {
+    pdfSeries: "PORTFÓLIO PROFISSIONAL · PT-BR",
+    pdfProfileLabel: "PERFIL PROFISSIONAL",
+    pdfDesignMetricLabel: "SITES DE PRODUÇÃO / MEDIDOS NO NAVEGADOR",
+    pdfEmailLabel: "E-MAIL",
+    workAria: "Projetos selecionados",
     documentTitle: "Nilson Lopes — Dados, BI e Automação",
     description: "Nilson Lopes — dados, BI e automação com contexto de operação.",
     ogTitle: "Nilson Lopes — Dados, BI e Automação",
@@ -78,6 +83,11 @@ export const copy = {
     backTop: "Voltar ao topo ↑",
   },
   en: {
+    pdfSeries: "SELECTED PORTFOLIO · EN",
+    pdfProfileLabel: "PROFESSIONAL PROFILE",
+    pdfDesignMetricLabel: "PRODUCTION SITES / MEASURED IN BROWSER",
+    pdfEmailLabel: "EMAIL",
+    workAria: "Selected projects",
     documentTitle: "Nilson Lopes — Data, BI & Automation",
     description: "Nilson Lopes — data, BI, and automation grounded in operations.",
     ogTitle: "Nilson Lopes — Data, BI & Automation",
