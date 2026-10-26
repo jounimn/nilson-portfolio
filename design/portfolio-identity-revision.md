@@ -21,9 +21,11 @@ an abstract service.
   must not obscure the person or the projects.
 - **Assets:** use Nilson's own material only. The verified GitHub profile photo is
   a 200px square crop and looks too soft for the large, prominent portrait this
-  direction needs. Request an original portrait from Nilson. Do not use stock or
-  generate a substitute. The profile photo may be used only if Nilson explicitly
-  chooses it and it is presented at a size that preserves its quality.
+  direction needs. The concept preview uses it temporarily at a restrained size
+  so the person-first composition can be reviewed. Request an original portrait
+  from Nilson before final implementation. Do not use stock or generate a
+  substitute. The profile photo may appear in the finished site only if Nilson
+  explicitly chooses it and it is presented at a size that preserves its quality.
 - **Motion:** retain the previously selected High tier for restrained data-lineage
   motion; honor `prefers-reduced-motion` and keep content readable without motion.
 - **Delivery:** finished bilingual website plus a PDF export of the selected

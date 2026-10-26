@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101311">
+  <link rel="icon" href="data:,">
+  <title>Nilson Lopes — Portfólio / preview</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #101311;
+      --panel: #151a17;
+      --line: #343b35;
+      --muted: #a1aaa1;
+      --paper: #f3f5ee;
+      --acid: #d6ff62;
+      --mint: #8ce5a4;
+      --mono: "Cascadia Code", "SFMono-Regular", Consolas, monospace;
+      --sans: "Aptos", "Segoe UI", Arial, sans-serif;
+      --serif: Georgia, "Times New Roman", serif;
+    }
+    * { box-sizing: border-box; }
+    html { background: var(--bg); scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--paper);
+      font-family: var(--sans);
+      background:
+        radial-gradient(ellipse at 82% 18%, rgba(126, 159, 92, .11), transparent 31rem),
+        var(--bg);
+    }
+    a { color: inherit; }
+    .page { width: min(1320px, calc(100% - 72px)); margin: auto; }
+    .mono { font-family: var(--mono); }
+    .topline {
+      height: 54px; border-bottom: 1px solid var(--line); display: flex;
+      align-items: center; justify-content: space-between; color: #bbc3b9;
+      font: 11px var(--mono); letter-spacing: .04em;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .brand-mark { color: var(--acid); font-size: 17px; }
+    .top-right { display: flex; align-items: center; gap: 26px; }
+    .top-right a { text-decoration: none; }
+    .lang { border: 1px solid var(--line); padding: 8px 10px; color: var(--acid); background: transparent; font: 11px var(--mono); cursor: pointer; }
+    .hero {
+      min-height: 610px; display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(300px, .7fr);
+      align-items: center; gap: 9%; padding: 67px 7% 72px; position: relative; overflow: hidden;
+      border-bottom: 1px solid var(--line);
+    }
+    .hero::before {
+      content: "01001110  01001001  01001100  01010011  01001111  01001110";
+      position: absolute; right: -3px; bottom: 35px; color: rgba(214,255,98,.10);
+      font: 10px var(--mono); letter-spacing: .38em; writing-mode: vertical-rl;
+    }
+    .hero-copy { position: relative; z-index: 1; }
+    .eyebrow { margin: 0 0 22px; color: var(--mint); font: 11px var(--mono); letter-spacing: .14em; text-transform: uppercase; }
+    h1 { margin: 0; font: 500 clamp(64px, 9vw, 126px)/.88 var(--serif); letter-spacing: -.075em; }
+    .role-line { margin: 30px 0 18px; max-width: 720px; color: var(--acid); font-size: clamp(23px, 3vw, 38px); line-height: 1.12; letter-spacing: -.045em; }
+    .intro { max-width: 640px; margin: 0; color: #c5ccc2; font-size: 17px; line-height: 1.75; }
+    .focus { margin-top: 24px; color: #9da89e; font: 11px/1.9 var(--mono); letter-spacing: .03em; }
+    .focus b { color: var(--paper); font-weight: 400; }
+    .actions { margin-top: 31px; display: flex; gap: 12px; flex-wrap: wrap; }
+    .button { display: inline-flex; justify-content: center; align-items: center; min-height: 47px; padding: 0 17px; text-decoration: none; font: 12px var(--mono); border: 1px solid var(--line); transition: border-color .2s, background .2s, color .2s; }
+    .button.primary { background: var(--acid); color: #12170d; border-color: var(--acid); }
+    .button:hover { border-color: var(--acid); }
+    .button.primary:hover { background: #e5ff9e; }
+    .portrait-wrap { justify-self: end; width: min(100%, 250px); position: relative; }
+    .portrait-meta { display: flex; justify-content: space-between; margin-bottom: 11px; color: #a4aea5; font: 10px var(--mono); letter-spacing: .08em; }
+    .portrait-frame { position: relative; border: 1px solid #526148; padding: 10px; background: rgba(21,26,23,.7); }
+    .portrait-frame::before, .portrait-frame::after { content: ""; position: absolute; width: 19px; height: 19px; border-color: var(--acid); border-style: solid; }
+    .portrait-frame::before { top: -4px; left: -4px; border-width: 1px 0 0 1px; }
+    .portrait-frame::after { right: -4px; bottom: -4px; border-width: 0 1px 1px 0; }
+    .portrait { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; object-position: center 38%; filter: saturate(.76) contrast(1.04); }
+    .portrait-caption { display: flex; justify-content: space-between; gap: 10px; margin-top: 11px; color: #b1bbb1; font: 10px var(--mono); }
+    .portrait-caption span:last-child { color: var(--acid); }
+    .section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; padding: 39px 0 22px; }
+    .section-head h2 { margin: 0; font: 500 34px var(--serif); letter-spacing: -.04em; }
+    .section-head p { margin: 0; color: #96a096; font: 10px var(--mono); }
+    .projects { display: grid; grid-template-columns: 1.08fr 1fr 1fr; border: 1px solid var(--line); }
+    .project { padding: 23px 24px 26px; min-height: 190px; position: relative; background: rgba(21,26,23,.4); }
+    .project + .project { border-left: 1px solid var(--line); }
+    .project-index { color: var(--mint); font: 10px var(--mono); }
+    .project h3 { margin: 20px 0 9px; color: var(--paper); font-size: 20px; font-weight: 500; letter-spacing: -.03em; }
+    .project h3 a { text-decoration: none; }
+    .project h3 a:hover { color: var(--acid); }
+    .project p { margin: 0; color: #a6afa6; font-size: 13px; line-height: 1.65; }
+    .project .stack { display: block; margin-top: 18px; color: #d6ff62; font: 9px var(--mono); }
+    .foot { display: flex; justify-content: space-between; padding: 24px 0 31px; color: #879187; font: 10px var(--mono); }
+    @media (max-width: 760px) {
+      .page { width: min(100% - 36px, 600px); }
+      .topline { height: 51px; }
+      .top-right { gap: 13px; }
+      .top-right .nav-link { display: none; }
+      .hero { min-height: 0; grid-template-columns: 1fr; gap: 34px; padding: 54px 0 48px; }
+      .hero::before { right: 0; bottom: 38px; font-size: 8px; }
+      h1 { font-size: clamp(62px, 17vw, 92px); }
+      .role-line { margin-top: 22px; font-size: 26px; }
+      .intro { font-size: 15px; line-height: 1.7; }
+      .focus { max-width: 340px; }
+      .portrait-wrap { justify-self: start; width: 194px; margin-left: 10px; }
+      .projects { grid-template-columns: 1fr; }
+      .project { min-height: auto; padding: 20px; }
+      .project + .project { border-left: 0; border-top: 1px solid var(--line); }
+      .project h3 { margin-top: 13px; }
+      .section-head { align-items: flex-end; }
+      .section-head h2 { font-size: 29px; }
+      .section-head p { text-align: right; }
+      .foot { gap: 16px; flex-wrap: wrap; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topline page">
+    <div class="brand"><span class="brand-mark">◈</span><span>NILSON LOPES <span style="color:#69746b">/ PORTFOLIO</span></span></div>
+    <nav class="top-right" aria-label="Main navigation">
+      <a class="nav-link" href="#projetos" data-i18n="navWork">Projetos</a>
+      <a class="nav-link" href="https://www.linkedin.com/in/nilsondgwm/" target="_blank" rel="noreferrer" data-i18n="navContact">Contato ↗</a>
+      <button class="lang" type="button" aria-label="Switch language">EN / PT</button>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="hero" aria-labelledby="hero-name">
+      <div class="hero-copy">
+        <p class="eyebrow" data-i18n="eyebrow">PORTFÓLIO PESSOAL · DADOS / AUTOMAÇÃO</p>
+        <h1 id="hero-name">Nilson<br>Lopes<span style="color:var(--acid)">.</span></h1>
+        <p class="role-line" data-i18n="role">Eu conecto operação, dados e automação.</p>
+        <p class="intro" data-i18n="intro">Sou Nilson. Minha trajetória passou pelo design, por redes e por operações antes de chegar a dados e BI. Essa experiência me ajuda a entender o problema de quem usa a informação e a construir análises, pipelines e automações que tornam o trabalho mais confiável.</p>
+        <p class="focus"><b>RPA</b> &nbsp;·&nbsp; <b data-i18n="dataAnalysis">ANÁLISE DE DADOS</b> &nbsp;·&nbsp; <b data-i18n="automation">AUTOMAÇÃO</b> &nbsp;·&nbsp; BI</p>
+        <div class="actions">
+          <a class="button primary" href="#projetos" data-i18n="workCta">Ver projetos ↓</a>
+          <a class="button" href="https://www.linkedin.com/in/nilsondgwm/" target="_blank" rel="noreferrer" data-i18n="contactCta">Conversar no LinkedIn ↗</a>
+        </div>
+      </div>
+      <figure class="portrait-wrap">
+        <div class="portrait-meta"><span>01 / IDENTIDADE</span><span>RJ · BR</span></div>
+        <div class="portrait-frame"><img class="portrait" src="github-avatar.jpg" alt="Foto de perfil de Nilson Lopes"></div>
+        <figcaption class="portrait-caption"><span>NILSON LOPES</span><span>DATA · BI · AUTOMATION</span></figcaption>
+      </figure>
+    </section>
+
+    <section id="projetos" aria-labelledby="projects-title">
+      <div class="section-head"><h2 id="projects-title" data-i18n="projectsTitle">Trabalho em foco</h2><p data-i18n="projectsLabel">03 PROJETOS SELECIONADOS</p></div>
+      <div class="projects">
+        <article class="project"><span class="project-index">01 / DATA PIPELINE</span><h3><a href="https://github.com/jounimn/website-analytics" target="_blank" rel="noreferrer">Planning Intelligence ↗</a></h3><p data-i18n="projectOne">Uma pipeline rastreável transforma planilhas de planejamento em dados estruturados para análise.</p><span class="stack" data-i18n="projectOneNote">AMOSTRA PÚBLICA SANITIZADA · DADOS FICTÍCIOS</span><span class="stack">PYTHON · ETL · DATA</span></article>
+        <article class="project"><span class="project-index">02 / AI TOOLING</span><h3><a href="https://github.com/jounimn/cog" target="_blank" rel="noreferrer">The Cog ↗</a></h3><p data-i18n="projectTwo">Um ambiente local para coordenar agentes de IA no fluxo de desenvolvimento.</p><span class="stack">AI · DEVELOPER TOOLS</span></article>
+        <article class="project"><span class="project-index">03 / DESIGN SYSTEMS</span><h3><a href="https://github.com/jounimn/df-design" target="_blank" rel="noreferrer">df-design ↗</a></h3><p data-i18n="projectThree">Uma skill de design e motion fundamentada em medições de sites reais.</p><span class="stack">PLAYWRIGHT · DESIGN · MOTION</span></article>
+      </div>
+    </section>
+    <footer class="foot"><span data-i18n="footLeft">DE OPERAÇÕES A SISTEMAS MAIS CONFIÁVEIS.</span><span><a href="https://github.com/jounimn/" target="_blank" rel="noreferrer">GITHUB ↗</a> &nbsp; <a href="https://www.linkedin.com/in/nilsondgwm/" target="_blank" rel="noreferrer">LINKEDIN ↗</a></span></footer>
+  </main>
+  <script>
+    const copy = {
+      pt: { navWork:"Projetos", navContact:"Contato ↗", eyebrow:"PORTFÓLIO PESSOAL · DADOS / AUTOMAÇÃO", role:"Eu conecto operação, dados e automação.", intro:"Sou Nilson. Minha trajetória passou pelo design, por redes e por operações antes de chegar a dados e BI. Essa experiência me ajuda a entender o problema de quem usa a informação e a construir análises, pipelines e automações que tornam o trabalho mais confiável.", dataAnalysis:"ANÁLISE DE DADOS", automation:"AUTOMAÇÃO", workCta:"Ver projetos ↓", contactCta:"Conversar no LinkedIn ↗", projectsTitle:"Trabalho em foco", projectsLabel:"03 PROJETOS SELECIONADOS", projectOne:"Uma pipeline rastreável transforma planilhas de planejamento em dados estruturados para análise.", projectOneNote:"AMOSTRA PÚBLICA SANITIZADA · DADOS FICTÍCIOS", projectTwo:"Um ambiente local para coordenar agentes de IA no fluxo de desenvolvimento.", projectThree:"Uma skill de design e motion fundamentada em medições de sites reais.", footLeft:"DE OPERAÇÕES A SISTEMAS MAIS CONFIÁVEIS." },
+      en: { navWork:"Projects", navContact:"Contact ↗", eyebrow:"PERSONAL PORTFOLIO · DATA / AUTOMATION", role:"I connect operations, data, and automation.", intro:"I'm Nilson. My path moved through design, networking, and operations before data and BI. That experience helps me understand the people using the information and build analysis, pipelines, and automation that make their work more reliable.", dataAnalysis:"DATA ANALYSIS", automation:"AUTOMATION", workCta:"Explore projects ↓", contactCta:"Connect on LinkedIn ↗", projectsTitle:"Selected work", projectsLabel:"03 SELECTED PROJECTS", projectOne:"A traceable pipeline turns planning spreadsheets into structured data for analysis.", projectOneNote:"SANITIZED PUBLIC SAMPLE · FICTIONAL DATA", projectTwo:"A local environment for coordinating AI agents in the development workflow.", projectThree:"A design and motion skill grounded in measurements from real production sites.", footLeft:"FROM OPERATIONS TO MORE RELIABLE SYSTEMS." }
+    };
+    let language = "pt";
+    document.querySelector(".lang").addEventListener("click", () => {
+      language = language === "pt" ? "en" : "pt";
+      document.documentElement.lang = language === "pt" ? "pt-BR" : "en";
+      document.querySelectorAll("[data-i18n]").forEach((element) => {
+        element.textContent = copy[language][element.dataset.i18n];
+      });
+      document.querySelector(".lang").textContent = language === "pt" ? "EN / PT" : "PT / EN";
+    });
+  </script>
+</body>
+</html>
