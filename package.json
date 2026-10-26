@@ -1,0 +1,14 @@
+{
+  "name": "nilson-lopes-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "preview": "node scripts/serve.mjs",
+    "export:pdf": "node scripts/export-pdf.mjs"
+  },
+  "devDependencies": {
+    "pdf-lib": "1.17.1",
+    "playwright": "1.64.1"
+  }
+}
